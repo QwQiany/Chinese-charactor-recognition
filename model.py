@@ -1,7 +1,6 @@
 from torch import nn
 import Residual_block
 import vgg_block
-from d2l import torch as d2l
 from torchvision.models import resnet18
 
 class CNN(nn.Module):

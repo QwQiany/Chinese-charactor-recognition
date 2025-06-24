@@ -1,0 +1,9 @@
+# 仅包含与设备无关的依赖（固定版本，便于复现）
+# 注意：PyTorch/torchvision 请按 ENV_SETUP.md 中的方法单独安装以匹配 CUDA/CPU
+# 本文件版本已调整以兼容 Python 3.12
+
+numpy==1.26.4
+opencv-python==4.9.0.80
+matplotlib==3.8.4
+scikit-learn==1.4.2
+Pillow==10.3.0

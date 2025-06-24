@@ -1,7 +1,6 @@
 import torch
 from torch import nn
 import matplotlib.pyplot as plt
-from d2l import torch as d2l
 import time
 import os
 
