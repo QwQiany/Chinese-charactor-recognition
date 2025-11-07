@@ -106,6 +106,11 @@ python train.py --model ResNet --epochs 50 --batch_size 512
 - `--lr`：学习率
 
 ### 测试模型
+```bash
+python dict.py --root ./data
+```
+- 运行成功后会在 ./data/char_dict 生成字典文件，并打印字符→索引映射
+
 
 ```bash
 python test.py --model ResNet
