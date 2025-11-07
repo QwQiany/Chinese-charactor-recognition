@@ -86,7 +86,7 @@ Chinese_charactor_recognition/
 
 ```bash
 # 克隆仓库
-git clone https://github.com/your-username/Chttps://github.com/AND-Q/HWDB1.1-hinese_charactor_recognition.git
+git clone https://github.com/QwQiany/Chinese-charactor-recognition.git
 cd Chinese_charactor_recognition
 
 # 安装依赖
