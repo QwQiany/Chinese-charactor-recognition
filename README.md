@@ -102,9 +102,11 @@ https://github.com/AND-Q/HWDB1.1-
 并将其完全解压，直到这两个文件夹中只含有.gnt文件
 
 准备好的data结构如下
+```
 ├── data/                  # 数据集目录
 │   ├── HWDB1.1trn_gnt--一堆.gnt     # 训练数据
 │   ├── HWDB1.1tst_gnt--一堆.gnt     # 测试数据
+```
 
 准备好data文件后
 需要先运行dict.py生成字典文件，然后才能训练模型。
