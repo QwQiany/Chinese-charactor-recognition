@@ -86,12 +86,32 @@ Chinese_charactor_recognition/
 
 ```bash
 # 克隆仓库
-git clone https://github.com/your-username/Chinese_charactor_recognition.git
+git clone https://github.com/your-username/Chttps://github.com/AND-Q/HWDB1.1-hinese_charactor_recognition.git
 cd Chinese_charactor_recognition
 
 # 安装依赖
 pip install -r requirements.txt
 ```
+
+### 训练数据集导入
+这个项目缺失data文件夹，需要先手动创建并放入数据文件。
+https://github.com/AND-Q/HWDB1.1-
+数据文件在上述项目中
+
+仅需下载其中的两个zip文件，HWDB1.1tst_gnt.zip，HWDB1.1trn_gnt.zip
+并将其完全解压，直到这两个文件夹中只含有.gnt文件
+
+准备好的data结构如下
+├── data/                  # 数据集目录
+│   ├── HWDB1.1trn_gnt--一堆.gnt     # 训练数据
+│   ├── HWDB1.1tst_gnt--一堆.gnt     # 测试数据
+
+准备好data文件后
+需要先运行dict.py生成字典文件，然后才能训练模型。
+```bash
+python dict.py --root ./data
+```
+- 运行成功后会在 ./data/char_dict 生成字典文件，并打印字符→索引映射
 
 ### 训练模型
 
@@ -106,11 +126,6 @@ python train.py --model ResNet --epochs 50 --batch_size 512
 - `--lr`：学习率
 
 ### 测试模型
-```bash
-python dict.py --root ./data
-```
-- 运行成功后会在 ./data/char_dict 生成字典文件，并打印字符→索引映射
-
 
 ```bash
 python test.py --model ResNet
