@@ -84,6 +84,14 @@ if __name__ == "__main__":
 
     # 输出目录
     output_dir = args.result + "/output_chars"
+    
+    # 清空目录中的旧图片
+    if os.path.exists(output_dir):
+        for file in os.listdir(output_dir):
+            if file.lower().endswith(('.png', '.jpg', '.jpeg')):
+                os.remove(os.path.join(output_dir, file))
+        print(f"已清空目录: {output_dir}")
+    
     os.makedirs(output_dir, exist_ok=True)
 
     # 保存字符图像
